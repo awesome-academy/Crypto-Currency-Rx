@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_1" translatesAutoresizingMaskIntoConstraints="NO" id="VLf-ig-Svv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aWt-N5-ErX">
                                 <rect key="frame" x="120" y="361" width="174" height="174"/>
@@ -41,7 +41,7 @@
                             <constraint firstItem="aWt-N5-ErX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="P2t-Az-odw"/>
                             <constraint firstItem="aWt-N5-ErX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ue7-Oi-0yI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aWt-N5-ErX" secondAttribute="trailing" constant="120" id="Vzh-hw-FKq"/>
-                            <constraint firstItem="VLf-ig-Svv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZNR-OF-Pj7"/>
+                            <constraint firstItem="VLf-ig-Svv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZNR-OF-Pj7"/>
                             <constraint firstAttribute="bottom" secondItem="VLf-ig-Svv" secondAttribute="bottom" id="fMR-k9-PvV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VLf-ig-Svv" secondAttribute="trailing" id="gbL-p9-ux1"/>
                             <constraint firstItem="VLf-ig-Svv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xrv-9A-3Ae"/>
