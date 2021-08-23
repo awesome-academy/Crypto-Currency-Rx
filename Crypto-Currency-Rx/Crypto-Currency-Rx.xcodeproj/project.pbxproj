@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CE30E93426D391BA00A24355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E93326D391BA00A24355 /* AppDelegate.swift */; };
 		CE30E93626D391BA00A24355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E93526D391BA00A24355 /* SceneDelegate.swift */; };
-		CE30E93826D391BA00A24355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E93726D391BA00A24355 /* ViewController.swift */; };
-		CE30E93B26D391BA00A24355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30E93926D391BA00A24355 /* Main.storyboard */; };
 		CE30E93D26D391BD00A24355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30E93C26D391BD00A24355 /* Assets.xcassets */; };
 		CE30E94026D391BD00A24355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30E93E26D391BD00A24355 /* LaunchScreen.storyboard */; };
+		CE30E94A26D3963300A24355 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = CE30E94926D3963300A24355 /* ObjectMapper */; };
+		CE30E95826D396E400A24355 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = CE30E95726D396E400A24355 /* Reusable */; };
+		CE30E95B26D3970A00A24355 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CE30E95A26D3970A00A24355 /* Then */; };
+		CE30E95E26D3975700A24355 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE30E95D26D3975700A24355 /* Alamofire */; };
+		CE30E96726D3994A00A24355 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E96626D3994A00A24355 /* TabBarController.swift */; };
+		CE30E96A26D399AB00A24355 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CE30E96926D399AB00A24355 /* RxCocoa */; };
+		CE30E96C26D399AB00A24355 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE30E96B26D399AB00A24355 /* RxSwift */; };
+		CE30E97526D39B8800A24355 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E97326D39B8800A24355 /* HomeViewController.swift */; };
+		CE30E97626D39B8800A24355 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30E97426D39B8800A24355 /* HomeViewController.xib */; };
+		CE30E97826D39B9600A24355 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E97726D39B9600A24355 /* HomeViewModel.swift */; };
+		CE30E97B26D39BDA00A24355 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E97926D39BDA00A24355 /* RankingViewController.swift */; };
+		CE30E97C26D39BDA00A24355 /* RankingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30E97A26D39BDA00A24355 /* RankingViewController.xib */; };
+		CE30E97E26D39BF100A24355 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E97D26D39BF100A24355 /* RankingViewModel.swift */; };
+		CE30E98126D39C3700A24355 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E97F26D39C3700A24355 /* FavoriteViewController.swift */; };
+		CE30E98226D39C3700A24355 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30E98026D39C3700A24355 /* FavoriteViewController.xib */; };
+		CE30E98426D39C4F00A24355 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E98326D39C4F00A24355 /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE30E93026D391BA00A24355 /* Crypto-Currency-Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-Currency-Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30E93326D391BA00A24355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30E93526D391BA00A24355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE30E93726D391BA00A24355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE30E93A26D391BA00A24355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE30E93C26D391BD00A24355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE30E93F26D391BD00A24355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE30E94126D391BD00A24355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE30E96626D3994A00A24355 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CE30E97326D39B8800A24355 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE30E97426D39B8800A24355 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		CE30E97726D39B9600A24355 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CE30E97926D39BDA00A24355 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		CE30E97A26D39BDA00A24355 /* RankingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingViewController.xib; sourceTree = "<group>"; };
+		CE30E97D26D39BF100A24355 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		CE30E97F26D39C3700A24355 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		CE30E98026D39C3700A24355 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		CE30E98326D39C4F00A24355 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE30E96C26D399AB00A24355 /* RxSwift in Frameworks */,
+				CE30E95E26D3975700A24355 /* Alamofire in Frameworks */,
+				CE30E95826D396E400A24355 /* Reusable in Frameworks */,
+				CE30E96A26D399AB00A24355 /* RxCocoa in Frameworks */,
+				CE30E95B26D3970A00A24355 /* Then in Frameworks */,
+				CE30E94A26D3963300A24355 /* ObjectMapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +84,127 @@
 		CE30E93226D391BA00A24355 /* Crypto-Currency-Rx */ = {
 			isa = PBXGroup;
 			children = (
-				CE30E93326D391BA00A24355 /* AppDelegate.swift */,
-				CE30E93526D391BA00A24355 /* SceneDelegate.swift */,
-				CE30E93726D391BA00A24355 /* ViewController.swift */,
-				CE30E93926D391BA00A24355 /* Main.storyboard */,
-				CE30E93C26D391BD00A24355 /* Assets.xcassets */,
-				CE30E93E26D391BD00A24355 /* LaunchScreen.storyboard */,
+				CE30E95F26D3976300A24355 /* AppDelegate */,
+				CE30E96426D3990D00A24355 /* Resource */,
+				CE30E96026D398E000A24355 /* Domain */,
+				CE30E96326D398F600A24355 /* Extensions */,
+				CE30E96226D398EB00A24355 /* Platform */,
+				CE30E96126D398E500A24355 /* Scenses */,
 				CE30E94126D391BD00A24355 /* Info.plist */,
 			);
 			path = "Crypto-Currency-Rx";
+			sourceTree = "<group>";
+		};
+		CE30E95F26D3976300A24355 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CE30E93526D391BA00A24355 /* SceneDelegate.swift */,
+				CE30E93326D391BA00A24355 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CE30E96026D398E000A24355 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CE30E96126D398E500A24355 /* Scenses */ = {
+			isa = PBXGroup;
+			children = (
+				CE30E97226D39B7000A24355 /* ExchangeRates */,
+				CE30E97126D39B6700A24355 /* DetailCoin */,
+				CE30E97026D39B4D00A24355 /* Search */,
+				CE30E96F26D39B4300A24355 /* Favorite */,
+				CE30E96E26D39B3C00A24355 /* Ranking */,
+				CE30E96D26D39B3400A24355 /* Home */,
+				CE30E96526D3993D00A24355 /* Tabbar */,
+			);
+			path = Scenses;
+			sourceTree = "<group>";
+		};
+		CE30E96226D398EB00A24355 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		CE30E96326D398F600A24355 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE30E96426D3990D00A24355 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CE30E93E26D391BD00A24355 /* LaunchScreen.storyboard */,
+				CE30E93C26D391BD00A24355 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CE30E96526D3993D00A24355 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				CE30E96626D3994A00A24355 /* TabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		CE30E96D26D39B3400A24355 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE30E97326D39B8800A24355 /* HomeViewController.swift */,
+				CE30E97426D39B8800A24355 /* HomeViewController.xib */,
+				CE30E97726D39B9600A24355 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE30E96E26D39B3C00A24355 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				CE30E97926D39BDA00A24355 /* RankingViewController.swift */,
+				CE30E97A26D39BDA00A24355 /* RankingViewController.xib */,
+				CE30E97D26D39BF100A24355 /* RankingViewModel.swift */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		CE30E96F26D39B4300A24355 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				CE30E97F26D39C3700A24355 /* FavoriteViewController.swift */,
+				CE30E98026D39C3700A24355 /* FavoriteViewController.xib */,
+				CE30E98326D39C4F00A24355 /* FavoriteViewModel.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		CE30E97026D39B4D00A24355 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CE30E97126D39B6700A24355 /* DetailCoin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailCoin;
+			sourceTree = "<group>";
+		};
+		CE30E97226D39B7000A24355 /* ExchangeRates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExchangeRates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +217,21 @@
 				CE30E92C26D391BA00A24355 /* Sources */,
 				CE30E92D26D391BA00A24355 /* Frameworks */,
 				CE30E92E26D391BA00A24355 /* Resources */,
+				CE30E94726D394F900A24355 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Crypto-Currency-Rx";
+			packageProductDependencies = (
+				CE30E94926D3963300A24355 /* ObjectMapper */,
+				CE30E95726D396E400A24355 /* Reusable */,
+				CE30E95A26D3970A00A24355 /* Then */,
+				CE30E95D26D3975700A24355 /* Alamofire */,
+				CE30E96926D399AB00A24355 /* RxCocoa */,
+				CE30E96B26D399AB00A24355 /* RxSwift */,
+			);
 			productName = "Crypto-Currency-Rx";
 			productReference = CE30E93026D391BA00A24355 /* Crypto-Currency-Rx.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +259,13 @@
 				Base,
 			);
 			mainGroup = CE30E92726D391BA00A24355;
+			packageReferences = (
+				CE30E94826D3963300A24355 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				CE30E95626D396E400A24355 /* XCRemoteSwiftPackageReference "Reusable" */,
+				CE30E95926D3970A00A24355 /* XCRemoteSwiftPackageReference "Then" */,
+				CE30E95C26D3975700A24355 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CE30E96826D399AB00A24355 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = CE30E93126D391BA00A24355 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,34 +282,54 @@
 			files = (
 				CE30E94026D391BD00A24355 /* LaunchScreen.storyboard in Resources */,
 				CE30E93D26D391BD00A24355 /* Assets.xcassets in Resources */,
-				CE30E93B26D391BA00A24355 /* Main.storyboard in Resources */,
+				CE30E97626D39B8800A24355 /* HomeViewController.xib in Resources */,
+				CE30E98226D39C3700A24355 /* FavoriteViewController.xib in Resources */,
+				CE30E97C26D39BDA00A24355 /* RankingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE30E94726D394F900A24355 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE30E92C26D391BA00A24355 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE30E93826D391BA00A24355 /* ViewController.swift in Sources */,
+				CE30E98426D39C4F00A24355 /* FavoriteViewModel.swift in Sources */,
+				CE30E96726D3994A00A24355 /* TabBarController.swift in Sources */,
 				CE30E93426D391BA00A24355 /* AppDelegate.swift in Sources */,
+				CE30E97E26D39BF100A24355 /* RankingViewModel.swift in Sources */,
 				CE30E93626D391BA00A24355 /* SceneDelegate.swift in Sources */,
+				CE30E97826D39B9600A24355 /* HomeViewModel.swift in Sources */,
+				CE30E97526D39B8800A24355 /* HomeViewController.swift in Sources */,
+				CE30E98126D39C3700A24355 /* FavoriteViewController.swift in Sources */,
+				CE30E97B26D39BDA00A24355 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE30E93926D391BA00A24355 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE30E93A26D391BA00A24355 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE30E93E26D391BD00A24355 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +517,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE30E94826D3963300A24355 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		CE30E95626D396E400A24355 /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+		CE30E95926D3970A00A24355 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		CE30E95C26D3975700A24355 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		CE30E96826D399AB00A24355 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE30E94926D3963300A24355 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE30E94826D3963300A24355 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		CE30E95726D396E400A24355 /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE30E95626D396E400A24355 /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+		CE30E95A26D3970A00A24355 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE30E95926D3970A00A24355 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		CE30E95D26D3975700A24355 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE30E95C26D3975700A24355 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CE30E96926D399AB00A24355 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE30E96826D399AB00A24355 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CE30E96B26D399AB00A24355 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE30E96826D399AB00A24355 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE30E92826D391BA00A24355 /* Project object */;
 }
