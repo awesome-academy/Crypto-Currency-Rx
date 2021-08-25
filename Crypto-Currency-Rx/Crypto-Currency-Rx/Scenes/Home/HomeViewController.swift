@@ -34,7 +34,7 @@ final class HomeViewController: UIViewController {
     
     private func configView() {
         view.backgroundColor = .systemBackground
-        navigationItem.title = "Home"
+        navigationItem.title = L10n.Home.Navigation.title
         
         let layout = UICollectionViewFlowLayout().then {
             $0.scrollDirection = .horizontal

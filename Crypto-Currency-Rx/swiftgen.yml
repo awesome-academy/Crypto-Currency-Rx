@@ -1,0 +1,13 @@
+input_dir: Crypto-Currency-Rx/
+
+output_dir: Crypto-Currency-Rx/Generated/
+
+## Strings
+strings:
+  inputs:
+    - Resource/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      params:
+        publicAccess: true
+      output: Strings+Generated.swift
