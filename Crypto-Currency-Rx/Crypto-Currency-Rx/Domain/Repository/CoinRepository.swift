@@ -11,11 +11,12 @@ import RxSwift
 protocol CoinRepositoryType {
     func getCoinByName(name: String) -> Observable<[SimpleCoin]>
     func getDetailCoin(uuid: String) -> Observable<CoinDetail>
-    func getCoins(url: String) -> Observable<[Coin]>
+    func getCoins(category: CoinCategory) -> Observable<[Coin]>
 }
 
 struct CoinRepository: CoinRepositoryType {
-    func getCoins(url: String) -> Observable<[Coin]> {
+    func getCoins(category: CoinCategory) -> Observable<[Coin]> {
+        let url = Network.shared.getCoinsURL(category: category)
         return APIService.shared.request(url: url,
                                          expecting: CoinResponse<DataCoin>.self )
             .map { response -> [Coin] in
