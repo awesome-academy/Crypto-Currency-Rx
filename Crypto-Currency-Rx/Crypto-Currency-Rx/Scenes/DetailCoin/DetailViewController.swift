@@ -19,8 +19,8 @@ final class DetailViewController: UIViewController {
 }
 
 extension DetailViewController {
-    static func instance(navigationController: UINavigationController,
-                         uuid: String) -> DetailViewController {
+    static func instance(uuid: String,
+                         navigationController: UINavigationController) -> DetailViewController {
         let detailScreen = DetailViewController()
         let viewModel = DetailViewModel(uuid: uuid)
         detailScreen.viewModel = viewModel

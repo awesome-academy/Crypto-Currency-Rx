@@ -27,6 +27,10 @@
 		CE30E98126D39C3700A24355 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E97F26D39C3700A24355 /* FavoriteViewController.swift */; };
 		CE30E98226D39C3700A24355 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30E98026D39C3700A24355 /* FavoriteViewController.xib */; };
 		CE30E98426D39C4F00A24355 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E98326D39C4F00A24355 /* FavoriteViewModel.swift */; };
+		CE61843B26D631F300F16FF0 /* RankingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61843A26D631F300F16FF0 /* RankingUseCase.swift */; };
+		CE61843D26D631FE00F16FF0 /* RankingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61843C26D631FE00F16FF0 /* RankingNavigator.swift */; };
+		CE61844126D6449A00F16FF0 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61843F26D6449A00F16FF0 /* CoinTableViewCell.swift */; };
+		CE61844226D6449A00F16FF0 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61844026D6449A00F16FF0 /* CoinTableViewCell.xib */; };
 		CE74197826D3DE9C0044308C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74197726D3DE9C0044308C /* APIService.swift */; };
 		CE74197A26D3DEA90044308C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74197926D3DEA90044308C /* Network.swift */; };
 		CE74197F26D3DEF70044308C /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74197E26D3DEF70044308C /* Coin.swift */; };
@@ -68,6 +72,10 @@
 		CE30E97F26D39C3700A24355 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		CE30E98026D39C3700A24355 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		CE30E98326D39C4F00A24355 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		CE61843A26D631F300F16FF0 /* RankingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingUseCase.swift; sourceTree = "<group>"; };
+		CE61843C26D631FE00F16FF0 /* RankingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNavigator.swift; sourceTree = "<group>"; };
+		CE61843F26D6449A00F16FF0 /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
+		CE61844026D6449A00F16FF0 /* CoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
 		CE74197726D3DE9C0044308C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CE74197926D3DEA90044308C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		CE74197E26D3DEF70044308C /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
@@ -133,7 +141,7 @@
 				CE30E96426D3990D00A24355 /* Resource */,
 				CE30E96026D398E000A24355 /* Domain */,
 				CE30E96226D398EB00A24355 /* Platform */,
-				CE30E96126D398E500A24355 /* Scenses */,
+				CE30E96126D398E500A24355 /* Scenes */,
 				CE30E94126D391BD00A24355 /* Info.plist */,
 				CE7419B726D4DA940044308C /* Constants.swift */,
 			);
@@ -158,7 +166,7 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		CE30E96126D398E500A24355 /* Scenses */ = {
+		CE30E96126D398E500A24355 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				CE30E97226D39B7000A24355 /* ExchangeRates */,
@@ -169,7 +177,7 @@
 				CE30E96D26D39B3400A24355 /* Home */,
 				CE30E96526D3993D00A24355 /* Tabbar */,
 			);
-			path = Scenses;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		CE30E96226D398EB00A24355 /* Platform */ = {
@@ -223,9 +231,12 @@
 		CE30E96E26D39B3C00A24355 /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
+				CE61843E26D6446A00F16FF0 /* Cell */,
 				CE30E97926D39BDA00A24355 /* RankingViewController.swift */,
 				CE30E97A26D39BDA00A24355 /* RankingViewController.xib */,
 				CE30E97D26D39BF100A24355 /* RankingViewModel.swift */,
+				CE61843A26D631F300F16FF0 /* RankingUseCase.swift */,
+				CE61843C26D631FE00F16FF0 /* RankingNavigator.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -262,6 +273,15 @@
 			children = (
 			);
 			path = ExchangeRates;
+			sourceTree = "<group>";
+		};
+		CE61843E26D6446A00F16FF0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE61843F26D6449A00F16FF0 /* CoinTableViewCell.swift */,
+				CE61844026D6449A00F16FF0 /* CoinTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		CE74197626D3DE8D0044308C /* Service */ = {
@@ -389,6 +409,7 @@
 				CE30E97626D39B8800A24355 /* HomeViewController.xib in Resources */,
 				CE30E98226D39C3700A24355 /* FavoriteViewController.xib in Resources */,
 				CE30E97C26D39BDA00A24355 /* RankingViewController.xib in Resources */,
+				CE61844226D6449A00F16FF0 /* CoinTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +446,14 @@
 				CE30E96726D3994A00A24355 /* TabBarController.swift in Sources */,
 				CE74198526D3DF4B0044308C /* Link.swift in Sources */,
 				CE74198826D3DF760044308C /* CoinRepository.swift in Sources */,
+				CE61844126D6449A00F16FF0 /* CoinTableViewCell.swift in Sources */,
 				CE30E93426D391BA00A24355 /* AppDelegate.swift in Sources */,
 				CE30E97E26D39BF100A24355 /* RankingViewModel.swift in Sources */,
+				CE61843B26D631F300F16FF0 /* RankingUseCase.swift in Sources */,
 				CE74199B26D494120044308C /* CoinCollectionViewCell.swift in Sources */,
 				CE7419AB26D498CA0044308C /* HomeNavigator.swift in Sources */,
 				CE30E93626D391BA00A24355 /* SceneDelegate.swift in Sources */,
+				CE61843D26D631FE00F16FF0 /* RankingNavigator.swift in Sources */,
 				CE74197A26D3DEA90044308C /* Network.swift in Sources */,
 				CE74198326D3DF360044308C /* CoinDetail.swift in Sources */,
 				CE7419B126D4990F0044308C /* DetailViewModel.swift in Sources */,

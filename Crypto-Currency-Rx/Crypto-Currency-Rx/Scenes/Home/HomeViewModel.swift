@@ -32,30 +32,26 @@ struct HomeViewModel {
     func transform(input: Input) -> Output {
         let topCoin = input.loadTrigger
             .flatMapLatest { _ in
-                return useCase.getCoins(category: .topCoin)
+                return useCase.getCoinsByCategory(category: .topCoin)
                     .asDriver(onErrorJustReturn: [])
-                    .map { $0 }
             }
         
         let topChange = input.loadTrigger
             .flatMapLatest { _ in
-                return useCase.getCoins(category: .topChange)
+                return useCase.getCoinsByCategory(category: .topChange)
                     .asDriver(onErrorJustReturn: [])
-                    .map { $0 }
             }
         
         let top24hVolume = input.loadTrigger
             .flatMapLatest { _ in
-                return useCase.getCoins(category: .top24hVolume)
+                return useCase.getCoinsByCategory(category: .top24hVolume)
                     .asDriver(onErrorJustReturn: [])
-                    .map { $0 }
             }
         
         let topMarketCap = input.loadTrigger
             .flatMapLatest { _ in
-                return useCase.getCoins(category: .topMarketCap)
+                return useCase.getCoinsByCategory(category: .topMarketCap)
                     .asDriver(onErrorJustReturn: [])
-                    .map { $0 }
             }
         
         let topCoinSelected = input.selectopCoinTrigger

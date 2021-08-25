@@ -9,13 +9,13 @@ import Foundation
 import RxSwift
 
 protocol HomeUseCaseType {
-    func getCoins(category: CoinCategory) -> Observable<[Coin]>
+    func getCoinsByCategory(category: CoinCategory) -> Observable<[Coin]>
 }
 
 struct HomeUseCase: HomeUseCaseType {
     let coinRepository: CoinRepositoryType
     
-    func getCoins(category: CoinCategory) -> Observable<[Coin]> {
-        return coinRepository.getCoins(category: category)
+    func getCoinsByCategory(category: CoinCategory) -> Observable<[Coin]> {
+        return coinRepository.getCoinsByCategory(category: category)
     }
 }
