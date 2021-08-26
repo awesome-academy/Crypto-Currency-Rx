@@ -29,7 +29,7 @@ final class RankingViewController: UIViewController {
     
     private func configView() {
         view.backgroundColor = .systemBackground
-        navigationItem.title = "Ranking"
+        navigationItem.title = L10n.Ranking.Navigation.title
         
         rankingTableView.do {
             $0.register(cellType: CoinTableViewCell.self)
@@ -65,11 +65,11 @@ final class RankingViewController: UIViewController {
                 return cell
             }
             .disposed(by: rx.disposeBag)
-        
-        output.coinsDriver.forEach({
+
+        output.coinsDriver.forEach {
             $0.drive()
                 .disposed(by: rx.disposeBag)
-        })
+        }
     }
     
 }

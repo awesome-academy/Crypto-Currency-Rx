@@ -15,8 +15,8 @@ struct RankingNavigator: RankingNavigatorType {
     let navigationController: UINavigationController
     
     func toDetailScreen(uuid: String) {
-        let detailScreen = DetailViewController.instance(uuid: uuid,
-                                                         navigationController: navigationController)
+        let detailScreen = DetailViewController.instance(navigationController: navigationController,
+                                                         uuid: uuid)
         detailScreen.modalPresentationStyle = .pageSheet
         navigationController.present(detailScreen, animated: true, completion: nil)
     }
