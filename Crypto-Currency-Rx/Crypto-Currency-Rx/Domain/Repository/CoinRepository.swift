@@ -11,11 +11,13 @@ import RxSwift
 protocol CoinRepositoryType {
     func getCoinByName(name: String) -> Observable<[SimpleCoin]>
     func getDetailCoin(uuid: String) -> Observable<CoinDetail>
-    func getCoins(category: CoinCategory) -> Observable<[Coin]>
+    func getCoinsByCategory(category: CoinCategory) -> Observable<[Coin]>
+    func getCoins(url: String) -> Observable<[Coin]>
+    func getMore(offset: String) -> Observable<[Coin]>
 }
 
 struct CoinRepository: CoinRepositoryType {
-    func getCoins(category: CoinCategory) -> Observable<[Coin]> {
+    func getCoinsByCategory(category: CoinCategory) -> Observable<[Coin]> {
         let url = Network.shared.getCoinsURL(category: category)
         return APIService.shared.request(url: url,
                                          expecting: CoinResponse<DataCoin>.self )
@@ -44,6 +46,28 @@ struct CoinRepository: CoinRepositoryType {
         return APIService.shared.request(url: url,
                                          expecting: CoinDetail.self)
     }
-
+    
+    func getCoins(url: String) -> Observable<[Coin]> {
+        return APIService.shared.request(url: url,
+                                         expecting: CoinResponse<DataCoin>.self)
+            .map { response -> [Coin] in
+                guard let data = response.data,
+                      let coins = data.coins else { return [] }
+                return coins
+            }
+            .catchAndReturn([])
+    }
+    
+    func getMore(offset: String) -> Observable<[Coin]> {
+        let url = Network.shared.getOffsetURL(offset: offset)
+        return APIService.shared.request(url: url,
+                                         expecting: CoinResponse<DataCoin>.self)
+            .map { response -> [Coin] in
+                guard let data = response.data,
+                      let coins = data.coins else { return [] }
+                return coins
+            }
+            .catchAndReturn([])
+    }
 }
 

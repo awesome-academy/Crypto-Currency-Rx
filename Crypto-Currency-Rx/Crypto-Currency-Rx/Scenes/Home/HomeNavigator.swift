@@ -15,8 +15,8 @@ struct HomeNavigator: HomeNavigatorType {
     let navigationController: UINavigationController
     
     func toDetailScreen(uuid: String) {
-        let detailScreen = DetailViewController.instance(navigationController: navigationController,
-                                                         uuid: uuid)
+        let detailScreen = DetailViewController.instance(uuid: uuid,
+                                                        navigationController: navigationController)
         detailScreen.modalPresentationStyle = .pageSheet
         navigationController.present(detailScreen, animated: true, completion: nil)
     }
