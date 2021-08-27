@@ -25,6 +25,7 @@ final class HomeViewController: UIViewController {
     var viewModel: HomeViewModel!
     private let selectCoinTrigger = PublishSubject<String>()
     private let headerRefreshTrigger = PublishRelay<Void>()
+    private let searchTrigger = PublishSubject<Void>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,12 @@ final class HomeViewController: UIViewController {
         scrollView.refreshControl?.addTarget(self,
                                              action: #selector(handleRefreshControl),
                                              for: .valueChanged)
+        
+        let searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(handleSearchButton))
+        navigationItem.rightBarButtonItem  = searchButton
     }
     
     @objc private func handleRefreshControl() {
@@ -66,11 +73,16 @@ final class HomeViewController: UIViewController {
         scrollView.refreshControl?.endRefreshing()
     }
     
+    @objc private func handleSearchButton() {
+        searchTrigger.onNext(())
+    }
+    
     private func bindViewModel() {
         let loadTrigger = Driver.merge(Driver.just(()),
                                        headerRefreshTrigger.asDriver(onErrorJustReturn: ()))
         let input = HomeViewModel.Input(
             loadTrigger: loadTrigger,
+            selectSearchTrigger: searchTrigger.asDriver(onErrorJustReturn: ()),
             selectopCoinTrigger: topCoinCollection.rx.itemSelected.asDriver(),
             selectopChangeTrigger: topChangeCollection.rx.itemSelected.asDriver(),
             selectop24hVolumeTrigger: top24hVolumeCollection.rx.itemSelected.asDriver(),

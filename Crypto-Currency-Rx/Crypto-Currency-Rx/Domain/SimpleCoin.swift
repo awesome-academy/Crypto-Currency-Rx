@@ -9,12 +9,12 @@ import Foundation
 import ObjectMapper
 
 struct DataSimpleCoin: Mappable {
-    var coin: [SimpleCoin]?
+    var coins: [SimpleCoin]?
     
     init?(map: Map) { }
     
     mutating func mapping(map: Map) {
-        coin <- map["coin"]
+        coins <- map["coins"]
     }
 }
 

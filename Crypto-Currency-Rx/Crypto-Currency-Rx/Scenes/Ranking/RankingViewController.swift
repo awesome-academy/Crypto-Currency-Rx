@@ -20,6 +20,7 @@ final class RankingViewController: UIViewController {
     private var offset = 0
     private var isLoading = true
     private let loadMoreTrigger = PublishSubject<Int>()
+    private let searchTrigger = PublishSubject<Void>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,16 @@ final class RankingViewController: UIViewController {
             $0.tableHeaderView = UIView(frame: .zero)
             $0.delegate = self
         }
+        
+        let searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(handleSearchButton))
+        navigationItem.rightBarButtonItem  = searchButton
+    }
+    
+    @objc private func handleSearchButton() {
+        searchTrigger.onNext(())
     }
     
     private func bindViewModel() {
@@ -45,6 +56,7 @@ final class RankingViewController: UIViewController {
                                        loadMoreTrigger.asDriver(onErrorJustReturn: 0))
         let input = RankingViewModel.Input(
             loadMoreTrigger: loadTrigger.asDriver(onErrorDriveWith: .empty()),
+            selectSearchTrigger: searchTrigger.asDriver(onErrorJustReturn: ()),
             selectCoinTrigger: rankingTableView.rx.itemSelected.asDriver())
         
         let output = viewModel.transform(input: input)

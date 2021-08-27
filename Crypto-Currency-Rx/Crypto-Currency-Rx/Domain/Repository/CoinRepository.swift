@@ -35,7 +35,7 @@ struct CoinRepository: CoinRepositoryType {
                                          expecting: CoinResponse<DataSimpleCoin>.self)
             .map { response -> [SimpleCoin] in
                 guard let data = response.data,
-                      let coins = data.coin else { return [] }
+                      let coins = data.coins else { return [] }
                 return coins
             }
             .catchAndReturn([])

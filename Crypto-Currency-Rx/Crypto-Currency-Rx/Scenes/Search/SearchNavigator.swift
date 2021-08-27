@@ -1,18 +1,18 @@
 //
-//  RankingNavigator.swift
+//  SearchNavigator.swift
 //  Crypto-Currency-Rx
 //
-//  Created by namtrinh on 25/08/2021.
+//  Created by namtrinh on 26/08/2021.
 //
 
 import UIKit
 
-protocol RankingNavigatorType {
+protocol SearchNavigatorType {
     func toDetailScreen(uuid: String)
-    func toSearchScreen()
+    func backToScreen()
 }
 
-struct RankingNavigator: RankingNavigatorType {
+struct SearchNavigator: SearchNavigatorType {
     let navigationController: UINavigationController
     
     func toDetailScreen(uuid: String) {
@@ -22,8 +22,7 @@ struct RankingNavigator: RankingNavigatorType {
         navigationController.present(detailScreen, animated: true, completion: nil)
     }
     
-    func toSearchScreen() {
-        let searchScreen = SearchViewController.instance(navigationController: navigationController)
-        navigationController.pushViewController(searchScreen, animated: true)
+    func backToScreen() {
+        navigationController.popViewController(animated: true)
     }
 }

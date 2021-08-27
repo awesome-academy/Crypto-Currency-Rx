@@ -15,6 +15,7 @@ struct HomeViewModel {
     
     struct Input {
         let loadTrigger: Driver<Void>
+        let selectSearchTrigger: Driver<Void>
         let selectopCoinTrigger: Driver<IndexPath>
         let selectopChangeTrigger: Driver<IndexPath>
         let selectop24hVolumeTrigger: Driver<IndexPath>
@@ -90,10 +91,14 @@ struct HomeViewModel {
             })
             .map{ _ in }
         
+        let searchSelected = input.selectSearchTrigger
+            .do(onNext: navigator.toSearchScreen)
+        
         let voidDrivers = [topCoinSelected,
                            topChangeSelected,
                            top24hVolumeSelected,
-                           topMarketCapSelected]
+                           topMarketCapSelected,
+                           searchSelected]
         
         return Output(topCoin: topCoin,
                       topChange: topChange,
