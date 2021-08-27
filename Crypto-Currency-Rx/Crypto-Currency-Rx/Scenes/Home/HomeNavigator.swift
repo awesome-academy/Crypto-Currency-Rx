@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeNavigatorType {
     func toDetailScreen(uuid: String)
+    func toSearchScreen()
 }
 
 struct HomeNavigator: HomeNavigatorType {
@@ -19,5 +20,10 @@ struct HomeNavigator: HomeNavigatorType {
                                                          uuid: uuid)
         detailScreen.modalPresentationStyle = .pageSheet
         navigationController.present(detailScreen, animated: true, completion: nil)
+    }
+    
+    func toSearchScreen() {
+        let searchScreen = SearchViewController.instance(navigationController: navigationController)
+        navigationController.pushViewController(searchScreen, animated: true)
     }
 }

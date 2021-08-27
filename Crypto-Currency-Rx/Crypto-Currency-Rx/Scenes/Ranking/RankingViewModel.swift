@@ -15,6 +15,7 @@ struct RankingViewModel {
     
     struct Input {
         let loadMoreTrigger: Driver<Int>
+        let selectSearchTrigger: Driver<Void>
         let selectCoinTrigger: Driver<IndexPath>
     }
     
@@ -45,7 +46,10 @@ struct RankingViewModel {
             })
             .map{ _ in }
         
-        let coinsDrivers = [coinLoadMore, coinSelected]
+        let searchSelected = input.selectSearchTrigger
+            .do(onNext: navigator.toSearchScreen)
+        
+        let coinsDrivers = [coinLoadMore, coinSelected, searchSelected]
         
         return Output(coins: dataSource.asDriver(),
                       coinsDriver: coinsDrivers)

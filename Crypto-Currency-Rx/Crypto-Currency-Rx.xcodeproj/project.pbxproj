@@ -11,6 +11,14 @@
 		CE0DB9E026D73DC3005617AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE0DB9DF26D73DC3005617AC /* Localizable.strings */; };
 		CE0DB9E526D7459E005617AC /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = CE0DB9E426D7459E005617AC /* swiftgen.yml */; };
 		CE0DB9E726D74B04005617AC /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9E626D74B04005617AC /* Strings+Generated.swift */; };
+		CE0DB9EA26D7DE8E005617AC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9E826D7DE8E005617AC /* SearchViewController.swift */; };
+		CE0DB9EB26D7DE8E005617AC /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0DB9E926D7DE8E005617AC /* SearchViewController.xib */; };
+		CE0DB9ED26D7DE9B005617AC /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9EC26D7DE9B005617AC /* SearchUseCase.swift */; };
+		CE0DB9EF26D7DEA6005617AC /* SearchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9EE26D7DEA6005617AC /* SearchNavigator.swift */; };
+		CE0DB9F326D7DECC005617AC /* SimpleCoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9F126D7DECC005617AC /* SimpleCoinTableViewCell.swift */; };
+		CE0DB9F426D7DECC005617AC /* SimpleCoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0DB9F226D7DECC005617AC /* SimpleCoinTableViewCell.xib */; };
+		CE0DB9F626D7E030005617AC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9F526D7E030005617AC /* SearchViewModel.swift */; };
+		CE0DB9F826D7E8CB005617AC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9F726D7E8CB005617AC /* UIViewController+Extensions.swift */; };
 		CE30E93426D391BA00A24355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E93326D391BA00A24355 /* AppDelegate.swift */; };
 		CE30E93626D391BA00A24355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E93526D391BA00A24355 /* SceneDelegate.swift */; };
 		CE30E93D26D391BD00A24355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30E93C26D391BD00A24355 /* Assets.xcassets */; };
@@ -66,6 +74,14 @@
 		CE0DB9DF26D73DC3005617AC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CE0DB9E426D7459E005617AC /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		CE0DB9E626D74B04005617AC /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		CE0DB9E826D7DE8E005617AC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CE0DB9E926D7DE8E005617AC /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CE0DB9EC26D7DE9B005617AC /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
+		CE0DB9EE26D7DEA6005617AC /* SearchNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigator.swift; sourceTree = "<group>"; };
+		CE0DB9F126D7DECC005617AC /* SimpleCoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCoinTableViewCell.swift; sourceTree = "<group>"; };
+		CE0DB9F226D7DECC005617AC /* SimpleCoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCoinTableViewCell.xib; sourceTree = "<group>"; };
+		CE0DB9F526D7E030005617AC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		CE0DB9F726D7E8CB005617AC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CE30E93026D391BA00A24355 /* Crypto-Currency-Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-Currency-Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30E93326D391BA00A24355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30E93526D391BA00A24355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +158,15 @@
 				CE0DB9E626D74B04005617AC /* Strings+Generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		CE0DB9F026D7DEB6005617AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE0DB9F126D7DECC005617AC /* SimpleCoinTableViewCell.swift */,
+				CE0DB9F226D7DECC005617AC /* SimpleCoinTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		CE30E92726D391BA00A24355 = {
@@ -224,6 +249,7 @@
 			children = (
 				CE74199F26D496900044308C /* UILabel+Extensions.swift */,
 				CE7419A126D496BB0044308C /* String+Extensions.swift */,
+				CE0DB9F726D7E8CB005617AC /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +312,12 @@
 		CE30E97026D39B4D00A24355 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				CE0DB9F026D7DEB6005617AC /* Cell */,
+				CE0DB9E826D7DE8E005617AC /* SearchViewController.swift */,
+				CE0DB9E926D7DE8E005617AC /* SearchViewController.xib */,
+				CE0DB9F526D7E030005617AC /* SearchViewModel.swift */,
+				CE0DB9EC26D7DE9B005617AC /* SearchUseCase.swift */,
+				CE0DB9EE26D7DEA6005617AC /* SearchNavigator.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -446,6 +478,7 @@
 			files = (
 				CE74198C26D3EFC70044308C /* Keys.plist in Resources */,
 				CE0DB9E026D73DC3005617AC /* Localizable.strings in Resources */,
+				CE0DB9EB26D7DE8E005617AC /* SearchViewController.xib in Resources */,
 				CE74199C26D494120044308C /* CoinCollectionViewCell.xib in Resources */,
 				CE30E94026D391BD00A24355 /* LaunchScreen.storyboard in Resources */,
 				CE7419AF26D499040044308C /* DetailViewController.xib in Resources */,
@@ -453,6 +486,7 @@
 				CE30E97626D39B8800A24355 /* HomeViewController.xib in Resources */,
 				CE30E98226D39C3700A24355 /* FavoriteViewController.xib in Resources */,
 				CE0DB9E526D7459E005617AC /* swiftgen.yml in Resources */,
+				CE0DB9F426D7DECC005617AC /* SimpleCoinTableViewCell.xib in Resources */,
 				CE30E97C26D39BDA00A24355 /* RankingViewController.xib in Resources */,
 				CE61844226D6449A00F16FF0 /* CoinTableViewCell.xib in Resources */,
 			);
@@ -524,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0DB9EA26D7DE8E005617AC /* SearchViewController.swift in Sources */,
 				CE74198126D3DF170044308C /* SimpleCoin.swift in Sources */,
 				CE7419A226D496BB0044308C /* String+Extensions.swift in Sources */,
 				CE30E98426D39C4F00A24355 /* FavoriteViewModel.swift in Sources */,
@@ -537,8 +572,12 @@
 				CE61843B26D631F300F16FF0 /* RankingUseCase.swift in Sources */,
 				CE74199B26D494120044308C /* CoinCollectionViewCell.swift in Sources */,
 				CE7419AB26D498CA0044308C /* HomeNavigator.swift in Sources */,
+				CE0DB9F626D7E030005617AC /* SearchViewModel.swift in Sources */,
+				CE0DB9ED26D7DE9B005617AC /* SearchUseCase.swift in Sources */,
 				CE30E93626D391BA00A24355 /* SceneDelegate.swift in Sources */,
+				CE0DB9F826D7E8CB005617AC /* UIViewController+Extensions.swift in Sources */,
 				CE61843D26D631FE00F16FF0 /* RankingNavigator.swift in Sources */,
+				CE0DB9EF26D7DEA6005617AC /* SearchNavigator.swift in Sources */,
 				CE74197A26D3DEA90044308C /* Network.swift in Sources */,
 				CE74198326D3DF360044308C /* CoinDetail.swift in Sources */,
 				CE7419B126D4990F0044308C /* DetailViewModel.swift in Sources */,
@@ -550,6 +589,7 @@
 				CE30E98126D39C3700A24355 /* FavoriteViewController.swift in Sources */,
 				CE7419A026D496900044308C /* UILabel+Extensions.swift in Sources */,
 				CE74198A26D3E3E60044308C /* CoinResponse.swift in Sources */,
+				CE0DB9F326D7DECC005617AC /* SimpleCoinTableViewCell.swift in Sources */,
 				CE7419A926D498B90044308C /* HomeUseCase.swift in Sources */,
 				CE30E97B26D39BDA00A24355 /* RankingViewController.swift in Sources */,
 				CE7419B826D4DA940044308C /* Constants.swift in Sources */,
