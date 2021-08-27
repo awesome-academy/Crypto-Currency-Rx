@@ -14,6 +14,7 @@ protocol CoinRepositoryType {
     func getCoinsByCategory(category: CoinCategory) -> Observable<[Coin]>
     func getCoins(url: String) -> Observable<[Coin]>
     func getMore(offset: String) -> Observable<[Coin]>
+    func getHistoryPrice(time: String) -> Observable<[History]>
 }
 
 struct CoinRepository: CoinRepositoryType {
@@ -44,7 +45,13 @@ struct CoinRepository: CoinRepositoryType {
     func getDetailCoin(uuid: String) -> Observable<CoinDetail> {
         let url = Network.shared.getDetailURL(uuid: uuid)
         return APIService.shared.request(url: url,
-                                         expecting: CoinDetail.self)
+                                         expecting: CoinResponse<DataDetailCoin>.self)
+            .map { response -> CoinDetail in
+                guard let data = response.data,
+                      let coin = data.coin else { return CoinDetail() }
+                return coin
+            }
+            .catchAndReturn(CoinDetail())
     }
     
     func getCoins(url: String) -> Observable<[Coin]> {
@@ -66,6 +73,18 @@ struct CoinRepository: CoinRepositoryType {
                 guard let data = response.data,
                       let coins = data.coins else { return [] }
                 return coins
+            }
+            .catchAndReturn([])
+    }
+    
+    func getHistoryPrice(time: String) -> Observable<[History]> {
+        let url = Network.shared.getHistoryURL(time: time)
+        return APIService.shared.request(url: url,
+                                         expecting: CoinResponse<PriceHistory>.self)
+            .map { response -> [History] in
+                guard let data = response.data,
+                      let history = data.history else { return [] }
+                return history
             }
             .catchAndReturn([])
     }
