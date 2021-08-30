@@ -7,6 +7,7 @@
 
 import Foundation
 import ObjectMapper
+import Then
 
 struct DataDetailCoin: Mappable {
     var coin: CoinDetail?
@@ -79,3 +80,4 @@ extension CoinDetail: Mappable {
     }
 }
 
+extension CoinDetail: Then { }

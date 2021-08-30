@@ -19,6 +19,12 @@
 		CE0DB9F426D7DECC005617AC /* SimpleCoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0DB9F226D7DECC005617AC /* SimpleCoinTableViewCell.xib */; };
 		CE0DB9F626D7E030005617AC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9F526D7E030005617AC /* SearchViewModel.swift */; };
 		CE0DB9F826D7E8CB005617AC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9F726D7E8CB005617AC /* UIViewController+Extensions.swift */; };
+		CE0DB9FB26D88F66005617AC /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = CE0DB9FA26D88F66005617AC /* Charts */; };
+		CE0DB9FD26D89940005617AC /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9FC26D89940005617AC /* DetailUseCase.swift */; };
+		CE0DB9FF26D8994E005617AC /* DetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DB9FE26D8994E005617AC /* DetailNavigator.swift */; };
+		CE0DBA0326D89F84005617AC /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DBA0126D89F84005617AC /* LinkTableViewCell.swift */; };
+		CE0DBA0426D89F84005617AC /* LinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0DBA0226D89F84005617AC /* LinkTableViewCell.xib */; };
+		CE0DBA0626D8C9BA005617AC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DBA0526D8C9B9005617AC /* History.swift */; };
 		CE30E93426D391BA00A24355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E93326D391BA00A24355 /* AppDelegate.swift */; };
 		CE30E93626D391BA00A24355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30E93526D391BA00A24355 /* SceneDelegate.swift */; };
 		CE30E93D26D391BD00A24355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30E93C26D391BD00A24355 /* Assets.xcassets */; };
@@ -82,6 +88,11 @@
 		CE0DB9F226D7DECC005617AC /* SimpleCoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCoinTableViewCell.xib; sourceTree = "<group>"; };
 		CE0DB9F526D7E030005617AC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		CE0DB9F726D7E8CB005617AC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		CE0DB9FC26D89940005617AC /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
+		CE0DB9FE26D8994E005617AC /* DetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigator.swift; sourceTree = "<group>"; };
+		CE0DBA0126D89F84005617AC /* LinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
+		CE0DBA0226D89F84005617AC /* LinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkTableViewCell.xib; sourceTree = "<group>"; };
+		CE0DBA0526D8C9B9005617AC /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		CE30E93026D391BA00A24355 /* Crypto-Currency-Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-Currency-Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30E93326D391BA00A24355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30E93526D391BA00A24355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +144,7 @@
 				CE30E95826D396E400A24355 /* Reusable in Frameworks */,
 				CE7419A526D497870044308C /* SDWebImage in Frameworks */,
 				CEDB414726D5ED2B00E0B6E2 /* NSObject-Rx in Frameworks */,
+				CE0DB9FB26D88F66005617AC /* Charts in Frameworks */,
 				CE30E96A26D399AB00A24355 /* RxCocoa in Frameworks */,
 				CE7419B626D4D85E0044308C /* RxDataSources in Frameworks */,
 				CE30E95B26D3970A00A24355 /* Then in Frameworks */,
@@ -165,6 +177,15 @@
 			children = (
 				CE0DB9F126D7DECC005617AC /* SimpleCoinTableViewCell.swift */,
 				CE0DB9F226D7DECC005617AC /* SimpleCoinTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CE0DBA0026D89F6F005617AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE0DBA0126D89F84005617AC /* LinkTableViewCell.swift */,
+				CE0DBA0226D89F84005617AC /* LinkTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -325,9 +346,12 @@
 		CE30E97126D39B6700A24355 /* DetailCoin */ = {
 			isa = PBXGroup;
 			children = (
+				CE0DBA0026D89F6F005617AC /* Cell */,
 				CE7419AC26D499040044308C /* DetailViewController.swift */,
 				CE7419AD26D499040044308C /* DetailViewController.xib */,
 				CE7419B026D4990F0044308C /* DetailViewModel.swift */,
+				CE0DB9FC26D89940005617AC /* DetailUseCase.swift */,
+				CE0DB9FE26D8994E005617AC /* DetailNavigator.swift */,
 			);
 			path = DetailCoin;
 			sourceTree = "<group>";
@@ -365,6 +389,7 @@
 				CE74198026D3DF170044308C /* SimpleCoin.swift */,
 				CE74198226D3DF360044308C /* CoinDetail.swift */,
 				CE74198426D3DF4B0044308C /* Link.swift */,
+				CE0DBA0526D8C9B9005617AC /* History.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -424,6 +449,7 @@
 				CE7419A426D497870044308C /* SDWebImage */,
 				CE7419B526D4D85E0044308C /* RxDataSources */,
 				CEDB414626D5ED2B00E0B6E2 /* NSObject-Rx */,
+				CE0DB9FA26D88F66005617AC /* Charts */,
 			);
 			productName = "Crypto-Currency-Rx";
 			productReference = CE30E93026D391BA00A24355 /* Crypto-Currency-Rx.app */;
@@ -461,6 +487,7 @@
 				CE7419A326D497870044308C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				CE7419B426D4D85E0044308C /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				CEDB414526D5ED2B00E0B6E2 /* XCRemoteSwiftPackageReference "NSObject-Rx" */,
+				CE0DB9F926D88F66005617AC /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = CE30E93126D391BA00A24355 /* Products */;
 			projectDirPath = "";
@@ -483,6 +510,7 @@
 				CE30E94026D391BD00A24355 /* LaunchScreen.storyboard in Resources */,
 				CE7419AF26D499040044308C /* DetailViewController.xib in Resources */,
 				CE30E93D26D391BD00A24355 /* Assets.xcassets in Resources */,
+				CE0DBA0426D89F84005617AC /* LinkTableViewCell.xib in Resources */,
 				CE30E97626D39B8800A24355 /* HomeViewController.xib in Resources */,
 				CE30E98226D39C3700A24355 /* FavoriteViewController.xib in Resources */,
 				CE0DB9E526D7459E005617AC /* swiftgen.yml in Resources */,
@@ -560,6 +588,7 @@
 			files = (
 				CE0DB9EA26D7DE8E005617AC /* SearchViewController.swift in Sources */,
 				CE74198126D3DF170044308C /* SimpleCoin.swift in Sources */,
+				CE0DB9FD26D89940005617AC /* DetailUseCase.swift in Sources */,
 				CE7419A226D496BB0044308C /* String+Extensions.swift in Sources */,
 				CE30E98426D39C4F00A24355 /* FavoriteViewModel.swift in Sources */,
 				CE30E96726D3994A00A24355 /* TabBarController.swift in Sources */,
@@ -568,6 +597,7 @@
 				CE74198826D3DF760044308C /* CoinRepository.swift in Sources */,
 				CE61844126D6449A00F16FF0 /* CoinTableViewCell.swift in Sources */,
 				CE30E93426D391BA00A24355 /* AppDelegate.swift in Sources */,
+				CE0DBA0326D89F84005617AC /* LinkTableViewCell.swift in Sources */,
 				CE30E97E26D39BF100A24355 /* RankingViewModel.swift in Sources */,
 				CE61843B26D631F300F16FF0 /* RankingUseCase.swift in Sources */,
 				CE74199B26D494120044308C /* CoinCollectionViewCell.swift in Sources */,
@@ -577,6 +607,7 @@
 				CE30E93626D391BA00A24355 /* SceneDelegate.swift in Sources */,
 				CE0DB9F826D7E8CB005617AC /* UIViewController+Extensions.swift in Sources */,
 				CE61843D26D631FE00F16FF0 /* RankingNavigator.swift in Sources */,
+				CE0DB9FF26D8994E005617AC /* DetailNavigator.swift in Sources */,
 				CE0DB9EF26D7DEA6005617AC /* SearchNavigator.swift in Sources */,
 				CE74197A26D3DEA90044308C /* Network.swift in Sources */,
 				CE74198326D3DF360044308C /* CoinDetail.swift in Sources */,
@@ -591,6 +622,7 @@
 				CE74198A26D3E3E60044308C /* CoinResponse.swift in Sources */,
 				CE0DB9F326D7DECC005617AC /* SimpleCoinTableViewCell.swift in Sources */,
 				CE7419A926D498B90044308C /* HomeUseCase.swift in Sources */,
+				CE0DBA0626D8C9BA005617AC /* History.swift in Sources */,
 				CE30E97B26D39BDA00A24355 /* RankingViewController.swift in Sources */,
 				CE7419B826D4DA940044308C /* Constants.swift in Sources */,
 			);
@@ -790,6 +822,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE0DB9F926D88F66005617AC /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
 		CE30E94826D3963300A24355 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
@@ -857,6 +897,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE0DB9FA26D88F66005617AC /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0DB9F926D88F66005617AC /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
 		CE30E94926D3963300A24355 /* ObjectMapper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE30E94826D3963300A24355 /* XCRemoteSwiftPackageReference "ObjectMapper" */;

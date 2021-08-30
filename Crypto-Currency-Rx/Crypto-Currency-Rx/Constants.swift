@@ -15,6 +15,14 @@ enum CoinCategory: String, CaseIterable {
     case none = ""
 }
 
+enum Select: String {
+    case threeHours = "3h"
+    case twentyFourHours = "24h"
+    case sevenDays = "7d"
+    case thirtyDays = "30d"
+    case threeMonth = "3m"
+}
+
 func createSpinner(width: CGFloat) -> UIView {
     let uiView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 100))
     
