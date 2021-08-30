@@ -96,11 +96,15 @@ final class SearchViewController: UIViewController {
 }
 
 extension SearchViewController {
-    static func instance(navigationController: UINavigationController) -> SearchViewController {
+    static func instance(navigationController: UINavigationController,
+                         fromExchangeRatesScreen: Bool = false) -> SearchViewController {
         let searchScreen = SearchViewController()
         let useCase = SearchUseCase(coinRepository: CoinRepository())
         let navigator = SearchNavigator(navigationController: navigationController)
-        let viewModel = SearchViewModel(useCase: useCase, navigator: navigator)
+        let viewModel = SearchViewModel(useCase: useCase,
+                                        navigator: navigator,
+                                        fromExchangeRatesScreen: fromExchangeRatesScreen)
+        
         searchScreen.viewModel = viewModel
         return searchScreen
     }

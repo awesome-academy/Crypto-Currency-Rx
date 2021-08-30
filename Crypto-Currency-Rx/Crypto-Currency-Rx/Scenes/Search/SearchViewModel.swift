@@ -12,6 +12,8 @@ import RxCocoa
 struct SearchViewModel {
     let useCase: SearchUseCaseType
     let navigator: SearchNavigatorType
+    let fromExchangeRatesScreen: Bool
+    let selectedCoinSubject = PublishSubject<SimpleCoin>()
     
     struct Input {
         let searchTrigger: Driver<String>
@@ -36,10 +38,15 @@ struct SearchViewModel {
                 coins[indexPath.row]
             }
             .do(onNext: {
-                navigator.toDetailScreen(uuid: $0.uuid)
+                if fromExchangeRatesScreen {
+                    navigator.backToScreen()
+                    selectedCoinSubject.onNext($0)
+                } else {
+                    navigator.toDetailScreen(uuid: $0.uuid)
+                }
             })
-            .map{ _ in }
-        
+            .map { _ in }
+   
         let cancelSelected = input.cancelTrigger
             .do(onNext: { _ in
                 navigator.backToScreen()

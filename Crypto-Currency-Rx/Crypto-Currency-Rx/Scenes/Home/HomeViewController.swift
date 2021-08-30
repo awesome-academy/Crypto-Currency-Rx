@@ -83,6 +83,7 @@ final class HomeViewController: UIViewController {
         let input = HomeViewModel.Input(
             loadTrigger: loadTrigger,
             selectSearchTrigger: searchTrigger.asDriver(onErrorJustReturn: ()),
+            selectExchangeRatesTrigger: exchangeRatesButton.rx.tap.asDriver(),
             selectopCoinTrigger: topCoinCollection.rx.itemSelected.asDriver(),
             selectopChangeTrigger: topChangeCollection.rx.itemSelected.asDriver(),
             selectop24hVolumeTrigger: top24hVolumeCollection.rx.itemSelected.asDriver(),

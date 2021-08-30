@@ -70,6 +70,12 @@
 		CE7419B126D4990F0044308C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7419B026D4990F0044308C /* DetailViewModel.swift */; };
 		CE7419B626D4D85E0044308C /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = CE7419B526D4D85E0044308C /* RxDataSources */; };
 		CE7419B826D4DA940044308C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7419B726D4DA940044308C /* Constants.swift */; };
+		CED9C6DC26DCC09E00629AF5 /* ExchangeRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6DA26DCC09E00629AF5 /* ExchangeRatesViewController.swift */; };
+		CED9C6DD26DCC09E00629AF5 /* ExchangeRatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED9C6DB26DCC09E00629AF5 /* ExchangeRatesViewController.xib */; };
+		CED9C6DF26DCC3B500629AF5 /* ExchangeRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6DE26DCC3B500629AF5 /* ExchangeRatesViewModel.swift */; };
+		CED9C6E126DCC3C500629AF5 /* ExchangeRatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6E026DCC3C500629AF5 /* ExchangeRatesUseCase.swift */; };
+		CED9C6E326DCC3D600629AF5 /* ExchangeRatesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6E226DCC3D600629AF5 /* ExchangeRatesNavigator.swift */; };
+		CED9C6E526DCC64000629AF5 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6E426DCC64000629AF5 /* Price.swift */; };
 		CEDB414726D5ED2B00E0B6E2 /* NSObject-Rx in Frameworks */ = {isa = PBXBuildFile; productRef = CEDB414626D5ED2B00E0B6E2 /* NSObject-Rx */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +138,12 @@
 		CE7419AD26D499040044308C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		CE7419B026D4990F0044308C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		CE7419B726D4DA940044308C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CED9C6DA26DCC09E00629AF5 /* ExchangeRatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewController.swift; sourceTree = "<group>"; };
+		CED9C6DB26DCC09E00629AF5 /* ExchangeRatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeRatesViewController.xib; sourceTree = "<group>"; };
+		CED9C6DE26DCC3B500629AF5 /* ExchangeRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewModel.swift; sourceTree = "<group>"; };
+		CED9C6E026DCC3C500629AF5 /* ExchangeRatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesUseCase.swift; sourceTree = "<group>"; };
+		CED9C6E226DCC3D600629AF5 /* ExchangeRatesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesNavigator.swift; sourceTree = "<group>"; };
+		CED9C6E426DCC64000629AF5 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +371,11 @@
 		CE30E97226D39B7000A24355 /* ExchangeRates */ = {
 			isa = PBXGroup;
 			children = (
+				CED9C6DA26DCC09E00629AF5 /* ExchangeRatesViewController.swift */,
+				CED9C6DB26DCC09E00629AF5 /* ExchangeRatesViewController.xib */,
+				CED9C6DE26DCC3B500629AF5 /* ExchangeRatesViewModel.swift */,
+				CED9C6E026DCC3C500629AF5 /* ExchangeRatesUseCase.swift */,
+				CED9C6E226DCC3D600629AF5 /* ExchangeRatesNavigator.swift */,
 			);
 			path = ExchangeRates;
 			sourceTree = "<group>";
@@ -390,6 +407,7 @@
 				CE74198226D3DF360044308C /* CoinDetail.swift */,
 				CE74198426D3DF4B0044308C /* Link.swift */,
 				CE0DBA0526D8C9B9005617AC /* History.swift */,
+				CED9C6E426DCC64000629AF5 /* Price.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -515,6 +533,7 @@
 				CE30E98226D39C3700A24355 /* FavoriteViewController.xib in Resources */,
 				CE0DB9E526D7459E005617AC /* swiftgen.yml in Resources */,
 				CE0DB9F426D7DECC005617AC /* SimpleCoinTableViewCell.xib in Resources */,
+				CED9C6DD26DCC09E00629AF5 /* ExchangeRatesViewController.xib in Resources */,
 				CE30E97C26D39BDA00A24355 /* RankingViewController.xib in Resources */,
 				CE61844226D6449A00F16FF0 /* CoinTableViewCell.xib in Resources */,
 			);
@@ -586,6 +605,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED9C6E126DCC3C500629AF5 /* ExchangeRatesUseCase.swift in Sources */,
+				CED9C6E326DCC3D600629AF5 /* ExchangeRatesNavigator.swift in Sources */,
 				CE0DB9EA26D7DE8E005617AC /* SearchViewController.swift in Sources */,
 				CE74198126D3DF170044308C /* SimpleCoin.swift in Sources */,
 				CE0DB9FD26D89940005617AC /* DetailUseCase.swift in Sources */,
@@ -593,6 +614,7 @@
 				CE30E98426D39C4F00A24355 /* FavoriteViewModel.swift in Sources */,
 				CE30E96726D3994A00A24355 /* TabBarController.swift in Sources */,
 				CE0DB9E726D74B04005617AC /* Strings+Generated.swift in Sources */,
+				CED9C6DC26DCC09E00629AF5 /* ExchangeRatesViewController.swift in Sources */,
 				CE74198526D3DF4B0044308C /* Link.swift in Sources */,
 				CE74198826D3DF760044308C /* CoinRepository.swift in Sources */,
 				CE61844126D6449A00F16FF0 /* CoinTableViewCell.swift in Sources */,
@@ -610,6 +632,7 @@
 				CE0DB9FF26D8994E005617AC /* DetailNavigator.swift in Sources */,
 				CE0DB9EF26D7DEA6005617AC /* SearchNavigator.swift in Sources */,
 				CE74197A26D3DEA90044308C /* Network.swift in Sources */,
+				CED9C6DF26DCC3B500629AF5 /* ExchangeRatesViewModel.swift in Sources */,
 				CE74198326D3DF360044308C /* CoinDetail.swift in Sources */,
 				CE7419B126D4990F0044308C /* DetailViewModel.swift in Sources */,
 				CE74197F26D3DEF70044308C /* Coin.swift in Sources */,
@@ -623,6 +646,7 @@
 				CE0DB9F326D7DECC005617AC /* SimpleCoinTableViewCell.swift in Sources */,
 				CE7419A926D498B90044308C /* HomeUseCase.swift in Sources */,
 				CE0DBA0626D8C9BA005617AC /* History.swift in Sources */,
+				CED9C6E526DCC64000629AF5 /* Price.swift in Sources */,
 				CE30E97B26D39BDA00A24355 /* RankingViewController.swift in Sources */,
 				CE7419B826D4DA940044308C /* Constants.swift in Sources */,
 			);
