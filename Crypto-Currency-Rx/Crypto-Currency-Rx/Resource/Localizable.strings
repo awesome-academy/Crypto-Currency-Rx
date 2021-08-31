@@ -1,3 +1,4 @@
-"Ranking.Navigation.Title" = "Ranking";
-"Home.Navigation.Title" = "Home";
-"Favorite.Navigation.Title" = "Favorite";
+"ranking" = "Ranking";
+"home" = "Home";
+"favorite" = "Favorite";
+"delete" = "Delete";

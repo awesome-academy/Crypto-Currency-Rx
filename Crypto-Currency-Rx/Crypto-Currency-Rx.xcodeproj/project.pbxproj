@@ -76,6 +76,13 @@
 		CED9C6E126DCC3C500629AF5 /* ExchangeRatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6E026DCC3C500629AF5 /* ExchangeRatesUseCase.swift */; };
 		CED9C6E326DCC3D600629AF5 /* ExchangeRatesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6E226DCC3D600629AF5 /* ExchangeRatesNavigator.swift */; };
 		CED9C6E526DCC64000629AF5 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6E426DCC64000629AF5 /* Price.swift */; };
+		CED9C6E826DDD9DE00629AF5 /* FavoriteCoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6E626DDD9DE00629AF5 /* FavoriteCoin.xcdatamodeld */; };
+		CED9C6F026DDDB4400629AF5 /* FavoriteCoin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6EE26DDDB4400629AF5 /* FavoriteCoin+CoreDataProperties.swift */; };
+		CED9C6F126DDDB4400629AF5 /* FavoriteCoin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6EF26DDDB4400629AF5 /* FavoriteCoin+CoreDataClass.swift */; };
+		CED9C6F326DDE0BE00629AF5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6F226DDE0BE00629AF5 /* DatabaseManager.swift */; };
+		CED9C6F526DDE0FE00629AF5 /* DatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6F426DDE0FE00629AF5 /* DatabaseRepository.swift */; };
+		CED9C6F726DDF0CA00629AF5 /* FavoriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6F626DDF0CA00629AF5 /* FavoriteUseCase.swift */; };
+		CED9C6F926DDF0DB00629AF5 /* FavoriteNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9C6F826DDF0DB00629AF5 /* FavoriteNavigator.swift */; };
 		CEDB414726D5ED2B00E0B6E2 /* NSObject-Rx in Frameworks */ = {isa = PBXBuildFile; productRef = CEDB414626D5ED2B00E0B6E2 /* NSObject-Rx */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +151,13 @@
 		CED9C6E026DCC3C500629AF5 /* ExchangeRatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesUseCase.swift; sourceTree = "<group>"; };
 		CED9C6E226DCC3D600629AF5 /* ExchangeRatesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesNavigator.swift; sourceTree = "<group>"; };
 		CED9C6E426DCC64000629AF5 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		CED9C6E726DDD9DE00629AF5 /* FavoriteCoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteCoin.xcdatamodel; sourceTree = "<group>"; };
+		CED9C6EE26DDDB4400629AF5 /* FavoriteCoin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavoriteCoin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CED9C6EF26DDDB4400629AF5 /* FavoriteCoin+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavoriteCoin+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CED9C6F226DDE0BE00629AF5 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		CED9C6F426DDE0FE00629AF5 /* DatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepository.swift; sourceTree = "<group>"; };
+		CED9C6F626DDF0CA00629AF5 /* FavoriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUseCase.swift; sourceTree = "<group>"; };
+		CED9C6F826DDF0DB00629AF5 /* FavoriteNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +219,7 @@
 		CE30E92726D391BA00A24355 = {
 			isa = PBXGroup;
 			children = (
+				CED9C6E626DDD9DE00629AF5 /* FavoriteCoin.xcdatamodeld */,
 				CE0DB9E426D7459E005617AC /* swiftgen.yml */,
 				CE30E93226D391BA00A24355 /* Crypto-Currency-Rx */,
 				CE30E93126D391BA00A24355 /* Products */,
@@ -272,6 +287,7 @@
 		CE30E96226D398EB00A24355 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				CED9C6E926DDDACD00629AF5 /* Database */,
 				CE74197626D3DE8D0044308C /* Service */,
 			);
 			path = Platform;
@@ -338,6 +354,8 @@
 				CE30E97F26D39C3700A24355 /* FavoriteViewController.swift */,
 				CE30E98026D39C3700A24355 /* FavoriteViewController.xib */,
 				CE30E98326D39C4F00A24355 /* FavoriteViewModel.swift */,
+				CED9C6F626DDF0CA00629AF5 /* FavoriteUseCase.swift */,
+				CED9C6F826DDF0DB00629AF5 /* FavoriteNavigator.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -416,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				CE74198726D3DF760044308C /* CoinRepository.swift */,
+				CED9C6F426DDE0FE00629AF5 /* DatabaseRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -427,6 +446,16 @@
 				CE74199A26D494120044308C /* CoinCollectionViewCell.xib */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		CED9C6E926DDDACD00629AF5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CED9C6EF26DDDB4400629AF5 /* FavoriteCoin+CoreDataClass.swift */,
+				CED9C6EE26DDDB4400629AF5 /* FavoriteCoin+CoreDataProperties.swift */,
+				CED9C6F226DDE0BE00629AF5 /* DatabaseManager.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		FD3DDD583382A9008CEF0F43 /* Pods */ = {
@@ -615,6 +644,7 @@
 				CE30E96726D3994A00A24355 /* TabBarController.swift in Sources */,
 				CE0DB9E726D74B04005617AC /* Strings+Generated.swift in Sources */,
 				CED9C6DC26DCC09E00629AF5 /* ExchangeRatesViewController.swift in Sources */,
+				CED9C6F126DDDB4400629AF5 /* FavoriteCoin+CoreDataClass.swift in Sources */,
 				CE74198526D3DF4B0044308C /* Link.swift in Sources */,
 				CE74198826D3DF760044308C /* CoinRepository.swift in Sources */,
 				CE61844126D6449A00F16FF0 /* CoinTableViewCell.swift in Sources */,
@@ -636,18 +666,24 @@
 				CE74198326D3DF360044308C /* CoinDetail.swift in Sources */,
 				CE7419B126D4990F0044308C /* DetailViewModel.swift in Sources */,
 				CE74197F26D3DEF70044308C /* Coin.swift in Sources */,
+				CED9C6F326DDE0BE00629AF5 /* DatabaseManager.swift in Sources */,
 				CE30E97826D39B9600A24355 /* HomeViewModel.swift in Sources */,
 				CE7419AE26D499040044308C /* DetailViewController.swift in Sources */,
+				CED9C6F526DDE0FE00629AF5 /* DatabaseRepository.swift in Sources */,
 				CE74197826D3DE9C0044308C /* APIService.swift in Sources */,
 				CE30E97526D39B8800A24355 /* HomeViewController.swift in Sources */,
 				CE30E98126D39C3700A24355 /* FavoriteViewController.swift in Sources */,
 				CE7419A026D496900044308C /* UILabel+Extensions.swift in Sources */,
 				CE74198A26D3E3E60044308C /* CoinResponse.swift in Sources */,
 				CE0DB9F326D7DECC005617AC /* SimpleCoinTableViewCell.swift in Sources */,
+				CED9C6F726DDF0CA00629AF5 /* FavoriteUseCase.swift in Sources */,
+				CED9C6E826DDD9DE00629AF5 /* FavoriteCoin.xcdatamodeld in Sources */,
 				CE7419A926D498B90044308C /* HomeUseCase.swift in Sources */,
 				CE0DBA0626D8C9BA005617AC /* History.swift in Sources */,
 				CED9C6E526DCC64000629AF5 /* Price.swift in Sources */,
 				CE30E97B26D39BDA00A24355 /* RankingViewController.swift in Sources */,
+				CED9C6F926DDF0DB00629AF5 /* FavoriteNavigator.swift in Sources */,
+				CED9C6F026DDDB4400629AF5 /* FavoriteCoin+CoreDataProperties.swift in Sources */,
 				CE7419B826D4DA940044308C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,6 +1008,19 @@
 			productName = "NSObject-Rx";
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CED9C6E626DDD9DE00629AF5 /* FavoriteCoin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CED9C6E726DDD9DE00629AF5 /* FavoriteCoin.xcdatamodel */,
+			);
+			currentVersion = CED9C6E726DDD9DE00629AF5 /* FavoriteCoin.xcdatamodel */;
+			path = FavoriteCoin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE30E92826D391BA00A24355 /* Project object */;
 }

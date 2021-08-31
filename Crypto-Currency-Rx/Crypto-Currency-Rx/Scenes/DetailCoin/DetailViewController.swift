@@ -38,11 +38,15 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var viewModel: DetailViewModel!
-    private var isFavorite = false
+    var simpleCoin: SimpleCoin?
+    var isFavorite = false
     var isLabelAtMaxHeight = false
     var labelHeight = CGFloat(70)
     let selectTimeTrigger = PublishSubject<Select>()
     private let headerRefreshTrigger = PublishRelay<Void>()
+    let favoriteCoinTrigger = PublishSubject<SimpleCoin>()
+    let deleteCoinTrigger = PublishSubject<SimpleCoin>()
+    let checkFavoriteTrigger = PublishSubject<SimpleCoin>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +89,10 @@ final class DetailViewController: UIViewController {
             .drive(rx.tap)
             .disposed(by: rx.disposeBag)
         
+        favoriteButton.rx.tap.asDriver()
+            .drive(rx.selectFavorite)
+            .disposed(by: rx.disposeBag)
+        
         scrollView.refreshControl = UIRefreshControl()
         scrollView.refreshControl?.addTarget(self,
                                              action: #selector(handleRefreshControl),
@@ -103,7 +111,10 @@ final class DetailViewController: UIViewController {
             loadTrigger: loadTrigger,
             loadHistoryTrigger: selectTimeTrigger.asDriver(onErrorJustReturn: .threeHours),
             backTrigger: backButton.rx.tap.asDriver(),
-            selectLinkTrigger: linksTableView.rx.itemSelected.asDriver())
+            selectLinkTrigger: linksTableView.rx.itemSelected.asDriver(),
+            addFavoriteTrigger: favoriteCoinTrigger.asDriver(onErrorDriveWith: .empty()),
+            deleteFavoriteTrigger: deleteCoinTrigger.asDriver(onErrorDriveWith: .empty()),
+            checkFavoriteTrigger: checkFavoriteTrigger.asDriver(onErrorDriveWith: .empty()))
         
         let output = viewModel.trasnform(input: input)
         
@@ -129,6 +140,10 @@ final class DetailViewController: UIViewController {
             .drive(self.rx.links)
             .disposed(by: rx.disposeBag)
         
+        output.favoriteCoin
+            .drive(rx.favorite)
+            .disposed(by: rx.disposeBag)
+        
         output.voidDriver.forEach {
             $0.drive()
                 .disposed(by: rx.disposeBag)
@@ -141,7 +156,8 @@ extension DetailViewController {
     static func instance(navigationController: UINavigationController,
                          uuid: String) -> DetailViewController {
         let detailScreen = DetailViewController()
-        let useCase = DetailUseCase(coinRepository: CoinRepository())
+        let useCase = DetailUseCase(coinRepository: CoinRepository(),
+                                    databaseRepository: DatabaseRepository())
         let navigator = DetailNavigator(navigationController: navigationController)
         let viewModel = DetailViewModel(useCase: useCase,
                                         navigator: navigator,
@@ -206,6 +222,13 @@ extension DetailViewController {
         historyChartView.data = data
     }
     
+    func configureFavoriteButton() {
+        let image = isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.favoriteButton.setBackgroundImage(image, for: .normal)
+        }
+    }
 }
 
 extension Reactive where Base: DetailViewController {
@@ -216,6 +239,15 @@ extension Reactive where Base: DetailViewController {
                 text: coinDetail.description,
                 width: controller.view.bounds.width,
                 font: controller.descriptionLabel.font)
+            let coin = SimpleCoin(uuid: coinDetail.uuid,
+                                               symbol: coinDetail.symbol,
+                                               name: coinDetail.name,
+                                               iconUrl: coinDetail.iconUrl)
+            coin.do {
+                controller.simpleCoin = $0
+                controller.checkFavoriteTrigger.onNext($0)
+            }
+            controller.configureFavoriteButton()
         }
     }
     
@@ -264,4 +296,27 @@ extension Reactive where Base: DetailViewController {
         }
     }
     
+    var favorite: Binder<Bool> {
+        return Binder(self.base) { controller, favorite in
+            controller.isFavorite = favorite
+        }
+    }
+    
+    var selectFavorite: Binder<Void> {
+        return Binder(self.base) { controller, _ in
+            if let simpleCoin = controller.simpleCoin {
+                controller.do {
+                    if $0.isFavorite {
+                        $0.isFavorite = false
+                        $0.configureFavoriteButton()
+                        $0.deleteCoinTrigger.onNext(simpleCoin)
+                    } else {
+                        $0.isFavorite = true
+                        $0.configureFavoriteButton()
+                        $0.favoriteCoinTrigger.onNext(simpleCoin)
+                    }
+                }
+            }
+        }
+    }
 }
