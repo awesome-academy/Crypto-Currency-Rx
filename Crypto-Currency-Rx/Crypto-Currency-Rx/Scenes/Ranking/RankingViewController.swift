@@ -30,7 +30,7 @@ final class RankingViewController: UIViewController {
     
     private func configView() {
         view.backgroundColor = .systemBackground
-        navigationItem.title = L10n.Ranking.Navigation.title
+        navigationItem.title = L10n.ranking
         
         rankingTableView.do {
             $0.register(cellType: CoinTableViewCell.self)

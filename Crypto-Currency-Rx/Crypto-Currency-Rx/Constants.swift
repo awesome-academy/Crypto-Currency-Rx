@@ -34,3 +34,10 @@ func createSpinner(width: CGFloat) -> UIView {
     uiView.addSubview(spinner)
     return uiView
 }
+
+enum DatabaseError: Error {
+    case addCoinFailed
+    case deleteCoinFailed
+    case checkCoinExistFailed
+    case getAllCoinFailed
+}

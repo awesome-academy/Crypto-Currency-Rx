@@ -19,12 +19,16 @@ struct DetailViewModel {
         let loadHistoryTrigger: Driver<Select>
         let backTrigger: Driver<Void>
         let selectLinkTrigger: Driver<IndexPath>
+        let addFavoriteTrigger: Driver<SimpleCoin>
+        let deleteFavoriteTrigger: Driver<SimpleCoin>
+        let checkFavoriteTrigger: Driver<SimpleCoin>
     }
     
     struct Output {
         let coin: Driver<CoinDetail>
         let history: Driver<[History]>
         let links: Driver<[Link]>
+        let favoriteCoin: Driver<Bool>
         let voidDriver: [Driver<Void>]
     }
     
@@ -34,7 +38,7 @@ struct DetailViewModel {
                 return useCase.getDetailCoin(uuid: uuid)
                     .asDriver(onErrorJustReturn: CoinDetail())
             }
-            
+    
         let history = input.loadHistoryTrigger
             .flatMapLatest { select in
                 return useCase.getHistoryPrice(time: select.rawValue)
@@ -55,11 +59,35 @@ struct DetailViewModel {
         let backSelected = input.backTrigger
             .do(onNext: navigator.backToScreen)
         
-        let voidDriver = [linkSelected, backSelected]
+        let favoriteCoin = input.addFavoriteTrigger
+            .flatMapLatest {
+                return useCase.addFavoriteCoin(coin: $0)
+                    .asDriver(onErrorDriveWith: .empty())
+            }
+            .map { _ in }
+            
+        let deleteCoin = input.deleteFavoriteTrigger
+            .flatMapLatest {
+                return useCase.deleteFavoriteCoin(uuid: $0.uuid)
+                    .asDriver(onErrorDriveWith: .empty())
+            }
+            .map { _ in }
+        
+        let isFavoriteCoin = input.checkFavoriteTrigger
+            .flatMapLatest {
+                return useCase.checkFavoriteCoin(uuid: $0.uuid)
+                    .asDriver(onErrorDriveWith: .empty())
+            }
+        
+        let voidDriver = [linkSelected,
+                          backSelected,
+                          favoriteCoin,
+                          deleteCoin]
         
         return Output(coin: coin,
                       history: history,
                       links: links,
+                      favoriteCoin: isFavoriteCoin,
                       voidDriver: voidDriver)
     }
 }
