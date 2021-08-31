@@ -16,6 +16,7 @@ struct HomeViewModel {
     struct Input {
         let loadTrigger: Driver<Void>
         let selectSearchTrigger: Driver<Void>
+        let selectExchangeRatesTrigger: Driver<Void>
         let selectopCoinTrigger: Driver<IndexPath>
         let selectopChangeTrigger: Driver<IndexPath>
         let selectop24hVolumeTrigger: Driver<IndexPath>
@@ -62,7 +63,7 @@ struct HomeViewModel {
             .do(onNext: {
                 navigator.toDetailScreen(uuid: $0.uuid)
             })
-            .map{ _ in }
+            .map { _ in }
         
         let topChangeSelected = input.selectopChangeTrigger
             .withLatestFrom(topChange) { (indexPath, coins) in
@@ -71,7 +72,7 @@ struct HomeViewModel {
             .do(onNext: {
                 navigator.toDetailScreen(uuid: $0.uuid)
             })
-            .map{ _ in }
+            .map { _ in }
         
         let top24hVolumeSelected = input.selectop24hVolumeTrigger
             .withLatestFrom(top24hVolume) { (indexPath, coins) in
@@ -80,7 +81,7 @@ struct HomeViewModel {
             .do(onNext: {
                 navigator.toDetailScreen(uuid: $0.uuid)
             })
-            .map{ _ in }
+            .map { _ in }
         
         let topMarketCapSelected = input.selectopMarketCapTrigger
             .withLatestFrom(topMarketCap) { (indexPath, coins) in
@@ -89,16 +90,26 @@ struct HomeViewModel {
             .do(onNext: {
                 navigator.toDetailScreen(uuid: $0.uuid)
             })
-            .map{ _ in }
+            .map { _ in }
         
         let searchSelected = input.selectSearchTrigger
             .do(onNext: navigator.toSearchScreen)
+        
+        let exchangeRatesSelected = input.selectExchangeRatesTrigger
+            .withLatestFrom(topMarketCap) { _, coins  in
+                coins.first?.name ?? ""
+            }
+            .do(onNext: {
+                navigator.toExchangeRatesScreen(defaultCurrency: $0)
+            })
+            .map { _ in }
         
         let voidDrivers = [topCoinSelected,
                            topChangeSelected,
                            top24hVolumeSelected,
                            topMarketCapSelected,
-                           searchSelected]
+                           searchSelected,
+                           exchangeRatesSelected]
         
         return Output(topCoin: topCoin,
                       topChange: topChange,

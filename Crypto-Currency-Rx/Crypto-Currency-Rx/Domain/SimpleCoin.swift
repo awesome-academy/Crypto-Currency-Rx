@@ -7,6 +7,7 @@
 
 import Foundation
 import ObjectMapper
+import Then
 
 struct DataSimpleCoin: Mappable {
     var coins: [SimpleCoin]?
@@ -48,3 +49,5 @@ extension SimpleCoin: Mappable {
         iconUrl <- map["iconUrl"]
     }
 }
+
+extension SimpleCoin: Then { }

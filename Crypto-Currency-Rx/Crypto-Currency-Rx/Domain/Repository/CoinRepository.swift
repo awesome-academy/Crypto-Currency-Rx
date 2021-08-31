@@ -15,6 +15,7 @@ protocol CoinRepositoryType {
     func getCoins(url: String) -> Observable<[Coin]>
     func getMore(offset: String) -> Observable<[Coin]>
     func getHistoryPrice(time: String) -> Observable<[History]>
+    func getExchageRates(base: String, target: String) -> Observable<Price>
 }
 
 struct CoinRepository: CoinRepositoryType {
@@ -87,6 +88,17 @@ struct CoinRepository: CoinRepositoryType {
                 return history
             }
             .catchAndReturn([])
+    }
+    
+    func getExchageRates(base: String, target: String) -> Observable<Price> {
+        let url = Network.shared.getExchangeRates(base: base, target: target)
+        return APIService.shared.request(url: url,
+                                         expecting: CoinResponse<Price>.self)
+            .map { response -> Price in
+                guard let price = response.data else { return Price() }
+                return price
+            }
+            .catchAndReturn(Price())
     }
 }
 
